@@ -1,0 +1,40 @@
+2)
+docker run: This command is used to run a Docker container. For example, docker run myimage will run a container based on the image named myimage.
+
+docker ps: This command lists all the running Docker containers on your system.
+
+docker --help: This command displays the help menu, which provides information on all the available Docker commands and options.
+
+docker build: This command is used to build a Docker image from a Dockerfile. For example, docker build -t myimage . will build an image named myimage from the Dockerfile located in the current directory (.).
+
+docker pull: This command is used to download a Docker image from a Docker registry. For example, docker pull myimage will download an image named myimage from the default registry (Docker Hub).
+
+3)
+docker system prune: This command is used to remove all unused Docker objects, such as stopped containers, dangling images, and unused networks. It frees up disk space on your system.
+
+docker login: This command is used to log in to a Docker registry, such as Docker Hub. You need to have an account on the registry to log in.
+
+docker rm: This command is used to remove one or more Docker containers. For example, docker rm mycontainer will remove a container named mycontainer. You can remove multiple containers at once by specifying their names or IDs. For example, docker rm mycontainer1 mycontainer2 will remove two containers named mycontainer1 and mycontainer2.
+
+4)
+The sudo docker run -i -t alpine /bin/bash command is used to run an interactive shell session inside a Docker container based on the Alpine Linux image. Here's what each part of the command does:
+
+sudo: This is a Linux command that allows the current user to run a command as the root user. It's often required when running Docker commands because Docker needs root privileges to create and manage containers.
+
+docker run: This is the command to run a Docker container.
+
+-i: This flag tells Docker to run the container in interactive mode, which allows the user to interact with the container's shell.
+
+-t: This flag tells Docker to allocate a pseudo-TTY (terminal) for the container.
+
+alpine: This is the name of the Docker image to run the container from. The Alpine Linux image is a lightweight Linux distribution commonly used as a base image for Docker containers.
+
+/bin/bash: This is the command to run inside the container. In this case, it's the Bash shell, which is a common shell used in Unix-based systems.
+
+So when you run this command, Docker will start a new container based on the Alpine Linux image, allocate a pseudo-TTY and run the Bash shell inside the container in interactive mode, allowing you to execute commands and interact with the container's shell.
+
+
+--
+Interview Questions:
+5)
+A. AWS ECS with service Auto Scaling can assist in this scenario. AWS ECS is a fully managed container orchestration service that enables you to run Docker containers on a scalable and highly available infrastructure. ECS allows you to define and run your containers on a cluster of EC2 instances and provides automatic scaling based on the load. With ECS service auto scaling, you can configure automatic scaling for your ECS services based on CloudWatch alarms, CPU utilization, or other custom metrics.
