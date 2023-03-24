@@ -1,0 +1,26 @@
+Docker Hub is a cloud-based repository for storing and sharing Docker container images. It is a central place where developers can store, manage, and distribute their container images.
+
+Docker Swarm is a tool that allows you to orchestrate and manage a cluster of Docker nodes. It provides a way to manage multiple Docker containers across multiple hosts, allowing for easier scaling and management of applications.
+
+Kubernetes is an open-source container orchestration system that automates the deployment, scaling, and management of containerized applications. It provides a platform for deploying, scaling, and managing containerized applications across a cluster of nodes.
+
+Docker Compose is a tool that allows you to define and run multi-container Docker applications. It enables you to specify the configuration of your application's services, networks, and volumes in a single file, and then launch and manage your application with a single command.
+
+---
+If you attempt to perform a Docker build based on an image that has not been previously referenced on your machine, Docker will attempt to pull the image from a Docker registry by default (such as Docker Hub or a private registry). If the image is not found on the registry, Docker will return an error indicating that it could not find the specified image.
+
+If the image is found on the registry, Docker will download the necessary layers and files to your machine to create the image. This process can take some time depending on the size of the image and the speed of your internet connection. Once the image is downloaded, Docker will use it as the base image for the build.
+
+It's important to note that if the image is not found on a public registry, you may need to authenticate with the private registry that hosts the image in order to download it. You may also need to configure Docker to use the private registry if it's not the default registry configured on your machine
+
+---
+
+'/var/lib/docker/volumes' is the default location on a Linux-based system where Docker stores its persistent data volumes.
+
+When a Docker container is created, it can be configured to use data volumes to persist data outside of the container's file system. These volumes can be used to store data that needs to persist even after the container is deleted or recreated, such as database files, logs, or configuration files.
+
+When a new volume is created using Docker, it is stored as a directory within the /var/lib/docker/volumes directory. The directory name is a randomly generated string that serves as the unique identifier for the volume. The contents of the volume are stored within this directory.
+
+Docker volumes can be managed using the docker volume command, which allows you to create, inspect, and delete volumes. You can also use Docker Compose or other container orchestration tools to manage volumes across multiple containers.
+
+---
